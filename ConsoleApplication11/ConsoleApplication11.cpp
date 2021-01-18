@@ -12,17 +12,17 @@
 #define USER 'X'
 using namespace std;
 
-char matrix[3][3] = {
+char matrix[3][3] = { /*Матрица для крестиков ноликов*/
 {EMPTY, EMPTY, EMPTY},
 {EMPTY, EMPTY, EMPTY},
 {EMPTY, EMPTY, EMPTY}
 };
 
-void  get_player_move();
-void disp_matrix();
-void ai_smart();
-void ai_random();
-void ai_genious();
+void  get_player_move();/*Ход игрока*/
+void disp_matrix();/*Отоброжение доски крестики нолики*/
+void ai_smart();/*компьютер ходит по стратегии*/
+void ai_random();/*компьютер ходит рандомом*/
+void ai_genious();/*компьютер не даст выйграть игроку*/
 int charToIntLogic(char s);
 void playerCanWin(char board[3][3], char which, int& x, int& y);
 char check();
@@ -122,6 +122,7 @@ void returnToMenu() {
 		break;
 	}
 }
+
 void get_player_move()
 {
 	int x, y;
